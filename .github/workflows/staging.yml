@@ -3,7 +3,7 @@ on:
   # but only for the main branch
   push:
     branches:
-      - main
+      - staging
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
@@ -19,4 +19,4 @@ jobs:
           server: ftp.adeadpixel.com
           username: ${{ secrets.ADEAD_FTP_USER}}
           password: ${{ secrets.ADEAD_FTP_PASS}}
-          server-dir: /repositories/
+          server-dir: /staging/
