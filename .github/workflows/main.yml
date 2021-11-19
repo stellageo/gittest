@@ -12,6 +12,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
         server: ftp.adeadpixel.com
-        username: ${{ADEAD_FTP_USER}}
-        password: ${{ADEAD_FTP_PASS}}
+        username: ${{secrets.ADEAD_FTP_USER}}
+        password: ${{secrets.ADEAD_FTP_PASS}}
         server-dir: /repositories/
